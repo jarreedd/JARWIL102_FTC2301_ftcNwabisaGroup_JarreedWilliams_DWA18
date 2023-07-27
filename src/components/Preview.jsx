@@ -1,26 +1,9 @@
 import React from "react";
-
-const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sept",
-    "Oct",
-    "Nov",
-    "Dec",
-];
+import getdate from "../utilities/getdate.js";
 
 const Preview = ({ data }) => {
     const date = new Date(data.updated);
-    const day = date.getDate();
-    const month = months[date.getMonth()];
-    const year = date.getFullYear();
-    const updatedDate = `${day} ${month} ${year}`;
+    const updatedDate = getdate(date);
 
     return (
         <div className="preview">
