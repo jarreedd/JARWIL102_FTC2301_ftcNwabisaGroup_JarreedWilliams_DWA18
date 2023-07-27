@@ -5,7 +5,6 @@ const Menu = () => {
 
     function toggleMenu() {
         setShowMore((showMore) => !showMore);
-        console.log(showMore);
     }
 
     return (
