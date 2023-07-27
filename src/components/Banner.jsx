@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hero = () => {
+const Banner = () => {
     const date = new Date();
     const hours = date.getHours();
     const [timeOfDay, setTimeOfDay] = React.useState("");
@@ -18,7 +18,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section className="hero">
+        <section className="banner">
             <small className="greeting">Good {timeOfDay},</small>
             <div className="account--user">
                 <h2 className="user">Guest</h2>
@@ -32,4 +32,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default Banner;
