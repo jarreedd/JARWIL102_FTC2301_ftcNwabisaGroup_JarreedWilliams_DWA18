@@ -1,15 +1,23 @@
 .menu-btn {
   z-index: 3;
   cursor: pointer;
-  transition: all 0.6s ease-out;
   height: 28px;
-  margin-top: 5px; }
+  margin-top: 5px;
+  transition: all 0.6s ease-out; }
   .menu-btn .btn-line {
     width: 30px;
     height: 4px;
     margin-bottom: 5px;
     background: #51d82c;
     transition: all 0.6s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg) translate(0, 6px); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 6px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
 
 .preview-display {
   display: flex;
