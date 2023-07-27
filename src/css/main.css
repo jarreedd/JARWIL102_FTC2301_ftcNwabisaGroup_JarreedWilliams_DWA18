@@ -9,11 +9,11 @@ body {
 
 h1 {
   margin: 0px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 28px; }
 
 span {
-  font-weight: bold;
+  font-weight: 900;
   color: #344BCB; }
 
 .header {
@@ -43,3 +43,40 @@ ion-icon {
     margin-bottom: 5px;
     background: #213082;
     transition: all 0.6s ease-out; }
+
+.hero {
+  width: 100%;
+  height: max-content;
+  background-color: #D6DAF5;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column; }
+
+.account--user {
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; }
+  .account--user button {
+    height: 24px;
+    color: #D6DAF5;
+    background-color: #213082;
+    border: none;
+    border-radius: 5px; }
+
+.greeting {
+  font-size: 14px;
+  color: #FAFAFA;
+  font-style: italic;
+  font-weight: 400; }
+
+.user {
+  font-size: 28px;
+  font-weight: 700;
+  color: #344BCB;
+  margin: 0;
+  padding: 0; }
+
+.notify {
+  font-size: 12px; }
