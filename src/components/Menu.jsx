@@ -8,26 +8,20 @@ const Menu = () => {
     }
 
     return (
-        <div
-            onClick={toggleMenu}
-            className={showMore ? "menu-btn" : "menu-btn close"}
-        >
-            <div className="btn-line"></div>
-            <div className="btn-line"></div>
-            <div className="btn-line"></div>
-        </div>
+        <>
+            <div
+                onClick={toggleMenu}
+                className={showMore ? "menu-btn close" : "menu-btn"}
+            >
+                <div className="btn-line"></div>
+                <div className="btn-line"></div>
+                <div className="btn-line"></div>
+            </div>
+            <nav className={showMore ? "menu show" : "menu"}>
+                <div className={showMore ? "menu-nav show" : "menu-nav"}></div>
+            </nav>
+        </>
     );
 };
 
 export default Menu;
-
-// if (!showMore) {
-//     menuBtn.classList.add("close");
-
-//     // Set Menu State
-//     showMore = true;
-// } else {
-//     menuBtn.classList.remove("close");
-//     // Set Menu State
-//     showMore = false;
-// }
