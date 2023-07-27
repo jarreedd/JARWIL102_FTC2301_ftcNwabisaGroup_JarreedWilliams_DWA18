@@ -13,7 +13,7 @@ h1 {
   font-size: 28px; }
 
 span {
-  font-weight: 900;
+  font-weight: 800;
   color: #344BCB; }
 
 .header {
@@ -80,3 +80,51 @@ ion-icon {
 
 .notify {
   font-size: 12px; }
+
+.browse--filters {
+  height: 40px;
+  position: sticky;
+  top: 50px;
+  background-color: #fafafa;
+  margin: 10px 0 5px 0; }
+  .browse--filters .filter--form {
+    display: flex;
+    align-items: center;
+    gap: 6px; }
+    .browse--filters .filter--form h3 {
+      margin: 10px 0 8px 20px;
+      font-size: 16px;
+      font-weight: 400; }
+    .browse--filters .filter--form button {
+      height: 24px;
+      font-size: 11px;
+      color: #213082;
+      background-color: #D6DAF5;
+      border: none;
+      border-radius: 5px; }
+
+.preview-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  background-color: #fafafa; }
+  .preview-display .preview {
+    width: 41vw;
+    height: 200px;
+    background: #D6DAF5;
+    border-radius: 10px; }
+
+.small--preview-display {
+  background-color: #fafafa;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  margin-left: 20px; }
+  .small--preview-display::-webkit-scrollbar {
+    width: 0px; }
+  .small--preview-display .preview {
+    min-width: 100px;
+    height: 150px;
+    background: #D6DAF5;
+    border-radius: 10px; }
