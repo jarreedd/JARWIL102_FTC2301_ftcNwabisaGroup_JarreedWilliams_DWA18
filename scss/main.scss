@@ -1,4 +1,8 @@
 $background-color: #FAFAFA;
+$text-color: #050505;
+$primary-color: #213082;
+$secondary-color: #D6DAF5;
+$accent: #344BCB;
 
 * {
     box-sizing: border-box;
@@ -19,13 +23,13 @@ h1 {
 
 span {
     font-weight: bold;
-    color: #344BCB;
+    color: $accent;
 }
 
 .header {
     width: 100vw;
     height: 50px;
-    background-color: #FAFAFA;
+    background-color: $background-color;
     padding: 0 20px;
 
     display: inline-flex;
@@ -38,7 +42,7 @@ span {
 
 ion-icon {
     font-size: 26px;
-    color: #344BCB;
+    color: $primary-color;
 }
 
 .menu-btn {
@@ -52,7 +56,7 @@ ion-icon {
         width: 30px;
         height: 4px;
         margin-bottom: 5px;
-        background: #344BCB;
+        background: $primary-color;
         transition: all 0.6s ease-out; 
     }
 }
