@@ -20,6 +20,7 @@ const Menu = () => {
             <nav className={showMore ? "menu show" : "menu"}>
                 <div className={showMore ? "menu-nav show" : "menu-nav"}></div>
             </nav>
+            <div className={showMore ? "overlay show" : "overlay"}></div>
         </>
     );
 };

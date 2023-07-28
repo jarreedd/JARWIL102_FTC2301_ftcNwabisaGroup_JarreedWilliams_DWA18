@@ -4,11 +4,14 @@ import Menu from "./Menu.jsx";
 
 const Header = () => {
     return (
-        <header className="header">
-            <ion-icon name="search"></ion-icon>
-            <BrandName />
+        <>
+            <header className="header">
+                <ion-icon name="search"></ion-icon>
+                <BrandName />
+                <div></div>
+            </header>
             <Menu />
-        </header>
+        </>
     );
 };
 

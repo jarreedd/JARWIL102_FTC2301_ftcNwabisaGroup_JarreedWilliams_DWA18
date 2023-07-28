@@ -5,7 +5,7 @@ import PreviewDisplay from "./PreviewDisplay.jsx";
 
 function App() {
     return (
-        <div>
+        <div className="app">
             <Header />
             <Banner />
             {/* <PreviewDisplay key="1" title="Recently Played" size="small" />
