@@ -63,7 +63,8 @@
   font-weight: 600;
   font-size: 18px; }
   .nav-item ion-icon {
-    margin-right: 10px; }
+    margin-right: 5px;
+    color: #2b2b2b; }
 
 .account {
   margin: 50px 0 20px 0;

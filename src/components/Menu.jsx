@@ -21,8 +21,10 @@ const Menu = () => {
                 <ul className={showMore ? "menu-nav show" : "menu-nav"}>
                     <li className="nav-item account">
                         <div className="account--user">
-                            <ion-icon name="person-circle-outline"></ion-icon>
-                            <h2 className="user">Guest</h2>
+                            <h2 className="user">
+                                <ion-icon name="person-circle-outline"></ion-icon>
+                                Guest
+                            </h2>
                             <button>Login/Register</button>
                         </div>
                         <small className="notify">
