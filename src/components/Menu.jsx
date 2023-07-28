@@ -18,7 +18,28 @@ const Menu = () => {
                 <div className="btn-line"></div>
             </div>
             <nav className={showMore ? "menu show" : "menu"}>
-                <div className={showMore ? "menu-nav show" : "menu-nav"}></div>
+                <ul className={showMore ? "menu-nav show" : "menu-nav"}>
+                    <li className="nav-item account">
+                        <div className="account--user">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                            <h2 className="user">Guest</h2>
+                            <button>Login/Register</button>
+                        </div>
+                        <small className="notify">
+                            Create an account by signing up gain access of
+                            certain feathers
+                        </small>
+                    </li>
+                    <li className="nav-item">
+                        <ion-icon name="sunny-outline"></ion-icon>Appearence
+                    </li>
+                    <li className="nav-item">
+                        <ion-icon name="bookmark-outline"></ion-icon>Favirotes
+                    </li>
+                    <li className="nav-item">
+                        <ion-icon name="download-outline"></ion-icon>Downloads
+                    </li>
+                </ul>
             </nav>
             <div className={showMore ? "overlay show" : "overlay"}></div>
         </>

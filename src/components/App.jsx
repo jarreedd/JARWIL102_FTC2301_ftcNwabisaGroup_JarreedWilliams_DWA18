@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header.jsx";
+import Menu from "./Menu.jsx";
 import Banner from "./Banner.jsx";
 import PreviewDisplay from "./PreviewDisplay.jsx";
 
@@ -7,6 +8,7 @@ function App() {
     return (
         <div className="app">
             <Header />
+            <Menu />
             <Banner />
             {/* <PreviewDisplay key="1" title="Recently Played" size="small" />
             <PreviewDisplay

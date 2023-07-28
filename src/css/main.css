@@ -8,10 +8,10 @@
   margin-top: 5px;
   transition: all 0.6s ease-out; }
   .menu-btn .btn-line {
-    width: 30px;
+    width: 24px;
     height: 4px;
     margin-bottom: 5px;
-    background: #51d82c;
+    background: #2a623d;
     transition: all 0.6s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg) translate(0, 6px); }
@@ -28,7 +28,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #caf3be;
+  background-color: #949292;
   opacity: 0.6;
   z-index: 2;
   visibility: hidden; }
@@ -45,35 +45,58 @@
   .menu.show {
     visibility: visible; }
   .menu-nav {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
     float: right;
     width: 70%;
     height: 100vh;
     overflow: hidden;
-    border-radius: 10px; }
-  .menu-nav {
+    border-radius: 15px;
     margin: 0;
-    padding: 0;
-    background-color: #fbfefb;
+    padding: 0 20px;
+    background-color: #cccccc;
     list-style: none;
     transform: translate3d(100%, 0, 0);
     transition: all 0.6s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
 
+.nav-item {
+  font-weight: 600;
+  font-size: 18px; }
+  .nav-item ion-icon {
+    margin-right: 10px; }
+
+.account {
+  margin: 50px 0 20px 0;
+  padding-top: 10px; }
+  .account .account--user {
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; }
+    .account .account--user .user {
+      font-size: 28px;
+      font-weight: 700;
+      color: #2a8539;
+      margin: 0;
+      padding: 0; }
+    .account .account--user button {
+      height: 24px;
+      color: #cccccc;
+      background-color: #2a623d;
+      border: none;
+      border-radius: 5px; }
+
 .preview-display {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  background-color: #fbfefb; }
+  background-color: #cccccc; }
   .preview-display .preview {
     width: 41vw;
     height: 200px;
-    background: #caf3be;
+    background: #949292;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -93,7 +116,7 @@
         font-weight: 600; }
 
 .small--preview-display {
-  background-color: #fbfefb;
+  background-color: #cccccc;
   display: flex;
   gap: 16px;
   overflow-x: auto;
@@ -103,19 +126,19 @@
   .small--preview-display .preview {
     min-width: 100px;
     height: 150px;
-    background: #caf3be;
+    background: #949292;
     border-radius: 10px; }
 
 .banner {
   width: 100%;
   height: max-content;
-  background-color: #caf3be;
+  background-color: #949292;
   padding: 10px 20px;
   display: flex;
   flex-direction: column; }
   .banner .greeting {
     font-size: 14px;
-    color: #fbfefb;
+    color: #cccccc;
     font-style: italic;
     font-weight: 400; }
   .banner .account--user {
@@ -127,13 +150,13 @@
     .banner .account--user .user {
       font-size: 28px;
       font-weight: 700;
-      color: #37ff00;
+      color: #2a8539;
       margin: 0;
       padding: 0; }
     .banner .account--user button {
       height: 24px;
-      color: #caf3be;
-      background-color: #51d82c;
+      color: #cccccc;
+      background-color: #2a623d;
       border: none;
       border-radius: 5px; }
   .banner .notify {
@@ -143,7 +166,7 @@
   height: 40px;
   position: sticky;
   top: 50px;
-  background-color: #fbfefb;
+  background-color: #cccccc;
   margin: 10px 0 5px 0; }
   .browse--filters .filter--form {
     display: flex;
@@ -155,14 +178,14 @@
       font-weight: 400; }
     .browse--filters .filter--form button {
       height: 24px;
-      color: #020401;
-      background-color: #caf3be;
+      color: #2b2b2b;
+      background-color: #949292;
       border: none;
       border-radius: 5px; }
       .browse--filters .filter--form button.active {
         height: 24px;
-        color: #caf3be;
-        background-color: #51d82c;
+        color: #cccccc;
+        background-color: #2a623d;
         border: none;
         border-radius: 5px; }
 
@@ -173,7 +196,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #fbfefb; }
+  background-color: #cccccc; }
   body::-webkit-scrollbar {
     width: 0; }
 
@@ -184,12 +207,12 @@ h1 {
 
 span {
   font-weight: 800;
-  color: #37ff00; }
+  color: #2a8539; }
 
 .header {
   width: 100vw;
   height: 50px;
-  background-color: #fbfefb;
+  background-color: #cccccc;
   padding: 0 20px;
   z-index: 1;
   display: inline-flex;
@@ -200,4 +223,4 @@ span {
 
 ion-icon {
   font-size: 26px;
-  color: #51d82c; }
+  color: #2a623d; }

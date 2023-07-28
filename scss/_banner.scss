@@ -2,6 +2,7 @@
     width: 100%;
     height:max-content;
     background-color: $secondary;
+    
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
@@ -30,7 +31,7 @@
 
         button {
             height: 24px;
-            color: $secondary;
+            color: $background;
             background-color: $primary;
             border: none;
             border-radius: 5px;
