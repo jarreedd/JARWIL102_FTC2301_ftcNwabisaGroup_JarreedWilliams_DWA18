@@ -4,33 +4,101 @@
     top: 50px;
 
     background-color: $background;
-    margin: 10px 0 5px 0;
+    margin: 10px 20px 5px 0;
 
     .filter--form {
         display: flex;
         align-items: center;
-        gap: 4px;
     
         h3 {
             margin: 10px 0 8px 20px;
             font-size: 16px;
             font-weight: 400;
         }
-    
-        button {
-            height: 24px;
-            color: $text;
-            background-color: $secondary;
-            border: none;
-            border-radius: 5px;
 
-            &.active {
+        .sort-btn-container {
+            display: inline-flex;
+            overflow: hidden;
+            margin: 0 8px 0 0;
+            padding: 0 2px;
+            position: relative;
+
+            ion-icon {
+                height: 16px;
+                width: 16px;
+                cursor: pointer;
+                position: relative;
+                padding: 3px;
+
+                &:hover {
+                    background-color: $accent;
+                    color: $background;
+                    border-radius: 50%;
+                }
+            }
+
+            .left-arrow {
+                position: absolute;
+                height: 100%;
+                width: 60px;
+                top: 0;
+                display: none;
+                align-items: center;
+                background: linear-gradient(to right, $background 50%, transparent);
+                
+                &.active {
+                    display: flex;
+                }
+            }
+            .right-arrow {
+                position: absolute;
                 height: 24px;
+                width: 60px;
+                right: 0px;
+                top: 0;
+                background: linear-gradient(to left, $background 50%, transparent);
+                display: none;
+                align-items: center;
+                justify-content: flex-end;
+
+                &.active {
+                    display: flex;
+                }
+            }
+
+            .sort-list {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding: 0 8px;
+                margin: 0px;
+                overflow: scroll;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .sort-btn {
+                height: 24px;
+                padding: 0px 5px;
                 color: $background;
-                background-color: $primary;
+                background-color: $secondary;
                 border: none;
                 border-radius: 5px;
+                user-select: none;
+                white-space: nowrap;
+
+                    &.active {
+                        color: $background;
+                        background-color: $primary;
+                    }
+
+                    &:hover {
+                        background-color: $accent;
+                    }
+                }
             }
         }
+    
     }
 }
