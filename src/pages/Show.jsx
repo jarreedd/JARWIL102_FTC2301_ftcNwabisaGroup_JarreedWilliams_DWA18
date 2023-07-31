@@ -7,7 +7,7 @@ const Show = () => {
     const ID = location.state.id;
 
     const [state, setState] = React.useState({
-        isloading: false,
+        isLoading: true,
         preview: location.state,
         show: null,
     });
@@ -19,6 +19,7 @@ const Show = () => {
                 setState((prev) => {
                     return {
                         ...prev,
+                        isLoading: false,
                         show: data,
                     };
                 });
@@ -28,6 +29,7 @@ const Show = () => {
 
     return (
         <main className="show-main">
+            {state.isLoading && <div>Loading...</div>}
             {state.show && (
                 <>
                     <div className="show-info">
@@ -39,7 +41,10 @@ const Show = () => {
                     <div className="select-season">
                         {state.show.seasons.map((season) => {
                             return (
-                                <button className="season-btn">
+                                <button
+                                    className="season-btn"
+                                    key={season.season}
+                                >
                                     <h4>{season.season}</h4>
                                     <img className="image" src={season.image} />
                                     <div className="season-info">

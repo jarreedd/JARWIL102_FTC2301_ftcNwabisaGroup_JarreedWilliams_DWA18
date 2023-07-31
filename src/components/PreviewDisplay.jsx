@@ -4,17 +4,24 @@ import Preview from "./Preview.jsx";
 const SHOWS_API = "https://podcast-api.netlify.app/shows";
 
 const PreviewDisplay = ({ title, size }) => {
-    const [shows, setShows] = React.useState([]);
+    const [state, setState] = React.useState({
+        isLoading: true,
+        shows: "",
+    });
 
     React.useEffect(() => {
         fetch(SHOWS_API)
             .then((res) => res.json())
             .then((data) => {
-                setShows(data);
+                setState((prev) => {
+                    return {
+                        ...prev,
+                        isLoading: false,
+                        shows: data,
+                    };
+                });
             });
     }, []);
-
-    const previews = shows.map((show) => <Preview key={show.id} data={show} />);
 
     const addTitle =
         title === "Browse" ? <Sort title="Browse" /> : <h3>{title}</h3>;
@@ -22,8 +29,17 @@ const PreviewDisplay = ({ title, size }) => {
 
     return (
         <section>
-            {addTitle}
-            <div className={type + "-display"}>{previews}</div>
+            {state.isLoading && <div>Loading...</div>}
+            {state.shows && (
+                <>
+                    {addTitle}
+                    <div className={type + "-display"}>
+                        {state.shows.map((show) => (
+                            <Preview key={show.id} data={show} />
+                        ))}
+                    </div>
+                </>
+            )}
         </section>
     );
 };

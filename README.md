@@ -22,9 +22,9 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 ✅ When viewing a specific show, data is loaded via fetch from individual show endpoint
 
-- There is a loading state while initial data is being loaded
+✅ There is a loading state while initial data is being loaded
 
-- There is a loading state while new data is being loaded
+✅ There is a loading state while new data is being loaded
 
 - User can view the details of a show broken down into seasons, sorted by number
 
@@ -44,9 +44,9 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 ✅ User sees what genres (as genre titles) a show is associated with when browsing
 
-- User sees a preview image of seasons for a specific show
+✅ User sees a preview image of seasons for a specific show
 
-- User sees the amount of episodes in a season as a number
+✅ User sees the amount of episodes in a season as a number
 
 - User can go back to a show view from a season-specific view
 
