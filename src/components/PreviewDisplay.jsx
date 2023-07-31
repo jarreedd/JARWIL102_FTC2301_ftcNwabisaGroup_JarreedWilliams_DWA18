@@ -1,13 +1,13 @@
 import React from "react";
 import Sort from "./Sort.jsx";
 import Preview from "./Preview.jsx";
-const SHOW_API = "https://podcast-api.netlify.app/shows";
+const SHOWS_API = "https://podcast-api.netlify.app/shows";
 
 const PreviewDisplay = ({ title, size }) => {
     const [shows, setShows] = React.useState([]);
 
     React.useEffect(() => {
-        fetch(SHOW_API)
+        fetch(SHOWS_API)
             .then((res) => res.json())
             .then((data) => {
                 setShows(data);

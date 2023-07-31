@@ -2,6 +2,7 @@
     height: 40px;
     position: sticky;
     top: 50px;
+    z-index: 1;
 
     background-color: $background;
     margin: 10px 20px 5px 0;
@@ -23,48 +24,48 @@
             padding: 0 2px;
             position: relative;
 
-            ion-icon {
-                height: 16px;
-                width: 16px;
-                cursor: pointer;
-                position: relative;
-                padding: 3px;
+            // ion-icon {
+            //     height: 16px;
+            //     width: 16px;
+            //     cursor: pointer;
+            //     position: relative;
+            //     padding: 3px;
 
-                &:hover {
-                    background-color: $accent;
-                    color: $background;
-                    border-radius: 50%;
-                }
-            }
+            //     &:hover {
+            //         background-color: $accent;
+            //         color: $background;
+            //         border-radius: 50%;
+            //     }
+            // }
 
-            .left-arrow {
-                position: absolute;
-                height: 100%;
-                width: 60px;
-                top: 0;
-                display: none;
-                align-items: center;
-                background: linear-gradient(to right, $background 50%, transparent);
+            // .left-arrow {
+            //     position: absolute;
+            //     height: 100%;
+            //     width: 60px;
+            //     top: 0;
+            //     display: none;
+            //     align-items: center;
+            //     background: linear-gradient(to right, $background 50%, transparent);
                 
-                &.active {
-                    display: flex;
-                }
-            }
-            .right-arrow {
-                position: absolute;
-                height: 24px;
-                width: 60px;
-                right: 0px;
-                top: 0;
-                background: linear-gradient(to left, $background 50%, transparent);
-                display: none;
-                align-items: center;
-                justify-content: flex-end;
+            //     &.active {
+            //         display: flex;
+            //     }
+            // }
+            // .right-arrow {
+            //     position: absolute;
+            //     height: 24px;
+            //     width: 60px;
+            //     right: 0px;
+            //     top: 0;
+            //     background: linear-gradient(to left, $background 50%, transparent);
+            //     display: none;
+            //     align-items: center;
+            //     justify-content: flex-end;
 
-                &.active {
-                    display: flex;
-                }
-            }
+            //     &.active {
+            //         display: flex;
+            //     }
+            // }
 
             .sort-list {
                 display: flex;
@@ -100,5 +101,13 @@
             }
         }
     
+        .filter--dialog {
+            width: 80vw;
+            height: 200px;
+            border-radius: 10px;
+            border: none;
+            background-color: $background;
+            z-index: 3;
+        }
     }
 }

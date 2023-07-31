@@ -1,6 +1,6 @@
 .menu-btn {
   position: fixed;
-  right: 20px;
+  left: 20px;
   top: 10px;
   z-index: 4;
   cursor: pointer;
@@ -22,20 +22,6 @@
     .menu-btn.close .btn-line:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px); }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #cccccc;
-  opacity: 0.6;
-  z-index: 2;
-  visibility: hidden; }
-  .overlay.show {
-    transition: all 0.6s ease-out;
-    visibility: visible; }
-
 .menu {
   position: fixed;
   top: 0;
@@ -45,7 +31,7 @@
   .menu.show {
     visibility: visible; }
   .menu-nav {
-    float: right;
+    float: left;
     width: 70%;
     height: 100vh;
     overflow: hidden;
@@ -54,80 +40,77 @@
     padding: 0 20px;
     background-color: #fafafa;
     list-style: none;
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
     transition: all 0.6s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
 
 .nav-item {
   font-weight: 600;
-  font-size: 18px; }
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; }
   .nav-item ion-icon {
     margin-right: 5px;
-    color: #2b2b2b; }
+    color: #2b2b2b;
+    font-size: 26px; }
+  .nav-item h4 {
+    margin: 0;
+    padding: 0; }
 
 .account {
   margin: 50px 0 20px 0;
   padding-top: 10px; }
   .account .account--user {
     height: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px; }
+    margin-bottom: 40px; }
     .account .account--user .user {
       font-size: 28px;
       font-weight: 700;
       color: #2a8539;
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      display: flex;
+      align-items: center; }
+      .account .account--user .user ion-icon {
+        margin-right: 5px;
+        color: #2b2b2b;
+        font-size: 34px; }
     .account .account--user button {
       height: 24px;
       color: #fafafa;
       background-color: #2a623d;
       border: none;
       border-radius: 5px; }
+  .account p {
+    font-size: 12px; }
 
 .preview-display {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
   background-color: #fafafa; }
   .preview-display .preview {
-    width: 41vw;
-    height: 200px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    .preview-display .preview img {
-      height: 140px;
-      border-radius: 10px; }
-    .preview-display .preview .preview--details {
-      width: 140px;
+    width: 140px;
+    padding: 0;
+    margin-top: 10px;
+    border: none;
+    background: none; }
+    .preview-display .preview .preview--image {
+      height: 120px; }
+    .preview-display .preview .preview--title {
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      font-size: 12px;
+      font-weight: 700; }
+    .preview-display .preview .preview--details {
+      flex-direction: column;
+      align-items: start;
+      display: flex;
+      flex-direction: column; }
       .preview-display .preview .preview--details p {
         margin: 0;
         padding: 0;
         font-size: 12px;
         font-weight: 600; }
-
-.small--preview-display {
-  background-color: #fafafa;
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  margin-left: 20px; }
-  .small--preview-display::-webkit-scrollbar {
-    width: 0px; }
-  .small--preview-display .preview {
-    min-width: 100px;
-    height: 150px;
-    background: #cccccc;
-    border-radius: 10px; }
 
 .banner {
   width: 100%;
@@ -166,6 +149,7 @@
   height: 40px;
   position: sticky;
   top: 50px;
+  z-index: 1;
   background-color: #fafafa;
   margin: 10px 20px 5px 0; }
   .browse--filters .filter--form {
@@ -181,38 +165,6 @@
       margin: 0 8px 0 0;
       padding: 0 2px;
       position: relative; }
-      .browse--filters .filter--form .sort-btn-container ion-icon {
-        height: 16px;
-        width: 16px;
-        cursor: pointer;
-        position: relative;
-        padding: 3px; }
-        .browse--filters .filter--form .sort-btn-container ion-icon:hover {
-          background-color: #2a8539;
-          color: #fafafa;
-          border-radius: 50%; }
-      .browse--filters .filter--form .sort-btn-container .left-arrow {
-        position: absolute;
-        height: 100%;
-        width: 60px;
-        top: 0;
-        display: none;
-        align-items: center;
-        background: linear-gradient(to right, #fafafa 50%, transparent); }
-        .browse--filters .filter--form .sort-btn-container .left-arrow.active {
-          display: flex; }
-      .browse--filters .filter--form .sort-btn-container .right-arrow {
-        position: absolute;
-        height: 24px;
-        width: 60px;
-        right: 0px;
-        top: 0;
-        background: linear-gradient(to left, #fafafa 50%, transparent);
-        display: none;
-        align-items: center;
-        justify-content: flex-end; }
-        .browse--filters .filter--form .sort-btn-container .right-arrow.active {
-          display: flex; }
       .browse--filters .filter--form .sort-btn-container .sort-list {
         display: flex;
         align-items: center;
@@ -236,6 +188,13 @@
             background-color: #2a623d; }
           .browse--filters .filter--form .sort-btn-container .sort-list .sort-btn:hover {
             background-color: #2a8539; }
+    .browse--filters .filter--form .filter--dialog {
+      width: 80vw;
+      height: 200px;
+      border-radius: 10px;
+      border: none;
+      background-color: #fafafa;
+      z-index: 3; }
 
 * {
   box-sizing: border-box;
@@ -262,13 +221,28 @@ span {
   height: 50px;
   background-color: #fafafa;
   padding: 0 20px;
+  padding-left: 60px;
   z-index: 1;
   display: inline-flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0; }
 
 ion-icon {
   font-size: 26px;
   color: #2a623d; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #cccccc;
+  opacity: 0.6;
+  z-index: 2;
+  visibility: hidden; }
+  .overlay.show {
+    transition: all 0.6s ease-out;
+    visibility: visible; }

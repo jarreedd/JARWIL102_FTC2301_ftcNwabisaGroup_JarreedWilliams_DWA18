@@ -5,16 +5,18 @@ const Preview = ({ data }) => {
     const date = new Date(data.updated);
     const updatedDate = getdate(date);
 
-    return (
-        <div className="preview">
-            <img src={data.image} />
+    console.log(data.id);
 
+    return (
+        <button className="preview" id={data.id}>
+            <img src={data.image} className="preview--image" />
+            <p className="preview--title">{data.title}</p>
             <div className="preview--details">
-                <p>seasons: {data.seasons}</p>
-                <p>last update: {updatedDate}</p>
-                <p>genre: </p>
+                <p>Seasons: {data.seasons}</p>
+                <p>Last update: {updatedDate}</p>
+                <p>Genre: </p>
             </div>
-        </div>
+        </button>
     );
 };
 

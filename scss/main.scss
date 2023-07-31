@@ -35,12 +35,13 @@ span {
     height: 50px;
     background-color: $background;
     padding: 0 20px;
+    padding-left: 60px;
 
     z-index: 1;
 
     display: inline-flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     position: sticky;
     top: 0;
@@ -49,4 +50,22 @@ span {
 ion-icon {
     font-size: 26px;
     color: $primary;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $secondary;
+    opacity: $background-opacity;
+    z-index: 2;
+    visibility: hidden;
+    
+
+    &.show {
+        @include easeOut;
+        visibility: visible;
+    }
 }

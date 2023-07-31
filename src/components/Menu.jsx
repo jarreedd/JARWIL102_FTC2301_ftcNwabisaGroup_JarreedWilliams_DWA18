@@ -19,27 +19,31 @@ const Menu = () => {
             </div>
             <nav className={showMore ? "menu show" : "menu"}>
                 <ul className={showMore ? "menu-nav show" : "menu-nav"}>
-                    <li className="nav-item account">
+                    <li className="account">
                         <div className="account--user">
                             <h2 className="user">
                                 <ion-icon name="person-circle-outline"></ion-icon>
                                 Guest
                             </h2>
-                            <button>Login/Register</button>
+                            <button className="li--btn">Login/Register</button>
                         </div>
-                        <small className="notify">
+
+                        <p>
                             Create an account by signing up gain access of
                             certain feathers
-                        </small>
+                        </p>
                     </li>
                     <li className="nav-item">
-                        <ion-icon name="sunny-outline"></ion-icon>Appearence
+                        <ion-icon name="sunny-outline"></ion-icon>
+                        <h4>Appearence</h4>
                     </li>
                     <li className="nav-item">
-                        <ion-icon name="bookmark-outline"></ion-icon>Favirotes
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                        <h4>Favirotes</h4>
                     </li>
                     <li className="nav-item">
-                        <ion-icon name="download-outline"></ion-icon>Downloads
+                        <ion-icon name="download-outline"></ion-icon>
+                        <h4>Downloads</h4>
                     </li>
                 </ul>
             </nav>
