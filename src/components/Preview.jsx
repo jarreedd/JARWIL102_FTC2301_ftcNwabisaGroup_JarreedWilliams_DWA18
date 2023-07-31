@@ -6,12 +6,9 @@ const Preview = ({ data }) => {
     const date = new Date(data.updated);
     const updatedDate = getdate(date);
 
-    console.log(data.id);
-
     return (
-        <div>
-            <Link to="/show">Show</Link>
-            <button className="preview" id={data.id}>
+        <Link to="show" state={data}>
+            <div className="preview">
                 <img src={data.image} className="preview--image" />
                 <p className="preview--title">{data.title}</p>
                 <div className="preview--details">
@@ -19,8 +16,8 @@ const Preview = ({ data }) => {
                     <p>Last update: {updatedDate}</p>
                     <p>Genre: </p>
                 </div>
-            </button>
-        </div>
+            </div>
+        </Link>
     );
 };
 
