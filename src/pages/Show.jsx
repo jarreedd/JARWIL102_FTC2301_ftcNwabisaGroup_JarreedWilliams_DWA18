@@ -40,10 +40,16 @@ const Show = () => {
                         {state.show.seasons.map((season) => {
                             return (
                                 <button className="season-btn">
+                                    <h4>{season.season}</h4>
                                     <img className="image" src={season.image} />
-                                    <h5 className="season-title">
-                                        {season.title}
-                                    </h5>
+                                    <div className="season-info">
+                                        <h5 className="season-title">
+                                            {season.title}
+                                        </h5>
+                                        <p>
+                                            episodes: {season.episodes.length}
+                                        </p>
+                                    </div>
                                 </button>
                             );
                         })}
