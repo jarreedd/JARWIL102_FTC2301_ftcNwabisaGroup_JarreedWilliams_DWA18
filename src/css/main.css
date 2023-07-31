@@ -166,9 +166,7 @@
     display: flex;
     align-items: center; }
     .browse--filters .filter--form h3 {
-      margin: 10px 0 8px 20px;
-      font-size: 16px;
-      font-weight: 400; }
+      margin: 10px 0 8px 20px; }
     .browse--filters .filter--form .sort-btn-container {
       display: inline-flex;
       overflow: hidden;
@@ -232,7 +230,8 @@
     border: none;
     border-radius: 5px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    background-color: #cccccc; }
     .select-season .season-btn h4 {
       width: 30px; }
     .select-season .season-btn .image {
@@ -246,6 +245,56 @@
         display: flex;
         justify-self: flex-start; }
       .select-season .season-btn .season-info p {
+        font-size: 12px; }
+
+.season-dialog {
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  border: none;
+  position: fixed;
+  top: 0;
+  padding: 10px 20px 20px 20px;
+  margin: 50px 0 0 0; }
+  .season-dialog .back-to-season {
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+    padding: 0;
+    border: none;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .season-dialog .back-to-season ion-icon {
+      font-size: 24px; }
+    .season-dialog .back-to-season:hover {
+      background-color: #2a8539; }
+      .season-dialog .back-to-season:hover ion-icon {
+        color: #fafafa; }
+  .season-dialog .season-selected {
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 0 0 10px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #cccccc; }
+    .season-dialog .season-selected h4 {
+      width: 30px; }
+    .season-dialog .season-selected .image {
+      height: 60px;
+      border-radius: 5px; }
+    .season-dialog .season-selected .season-info {
+      margin: 10px; }
+      .season-dialog .season-selected .season-info .season-title, .season-dialog .season-selected .season-info p {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-self: flex-start; }
+      .season-dialog .season-selected .season-info p {
         font-size: 12px; }
 
 * {

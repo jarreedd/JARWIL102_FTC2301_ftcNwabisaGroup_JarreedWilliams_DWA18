@@ -26,7 +26,7 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 ✅ There is a loading state while new data is being loaded
 
-- User can view the details of a show broken down into seasons, sorted by number
+✅ User can view the details of a show broken down into seasons, sorted by number
 
 - User can listen to any episode in a season of a show
 
