@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
     const [showMore, setShowMore] = React.useState(false);
@@ -25,7 +26,11 @@ const Menu = () => {
                                 <ion-icon name="person-circle-outline"></ion-icon>
                                 Guest
                             </h2>
-                            <button className="li--btn">Login/Register</button>
+                            <Link to="login">
+                                <button className="li--btn">
+                                    Login/Register
+                                </button>
+                            </Link>
                         </div>
 
                         <p>
@@ -37,13 +42,17 @@ const Menu = () => {
                         <ion-icon name="sunny-outline"></ion-icon>
                         <h4>Appearence</h4>
                     </li>
-                    <li className="nav-item">
-                        <ion-icon name="bookmark-outline"></ion-icon>
-                        <h4>Favirotes</h4>
+                    <li>
+                        <Link to="/favorites" className="nav-item">
+                            <ion-icon name="bookmark-outline"></ion-icon>
+                            <h4>Favirotes</h4>
+                        </Link>
                     </li>
-                    <li className="nav-item">
-                        <ion-icon name="download-outline"></ion-icon>
-                        <h4>Downloads</h4>
+                    <li>
+                        <Link to="/downloads" className="nav-item">
+                            <ion-icon name="download-outline"></ion-icon>
+                            <h4>Downloads</h4>
+                        </Link>
                     </li>
                 </ul>
             </nav>

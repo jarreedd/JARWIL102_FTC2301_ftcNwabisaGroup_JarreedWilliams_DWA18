@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
     const date = new Date();
@@ -22,7 +23,9 @@ const Banner = () => {
             <small className="greeting">Good {timeOfDay},</small>
             <div className="account--user">
                 <h2 className="user">Guest</h2>
-                <button>Login/Register</button>
+                <Link to="login">
+                    <button>Login/Register</button>
+                </Link>
             </div>
             <small className="notify">
                 Create an account by signing up to gain access to certain
