@@ -109,3 +109,5 @@ This project is a podcast app that allows users to browse various podcast shows,
 - User favourites are automatically synced when logged in, ensuring that they share favourites between devices
 
 - Users can share their favourites as a publicly accessible URL
+
+Website link: [Audio SORCERER](https://deluxe-florentine-8fa394.netlify.app/)
