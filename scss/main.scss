@@ -69,3 +69,12 @@ ion-icon {
         visibility: visible;
     }
 }
+
+a {
+    text-decoration: none;
+    color: text;
+    
+    &:visited {
+        color: $text;
+    }
+}

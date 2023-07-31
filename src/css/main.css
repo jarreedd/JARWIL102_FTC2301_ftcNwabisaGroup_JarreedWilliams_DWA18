@@ -246,3 +246,9 @@ ion-icon {
   .overlay.show {
     transition: all 0.6s ease-out;
     visibility: visible; }
+
+a {
+  text-decoration: none;
+  color: text; }
+  a:visited {
+    color: #2b2b2b; }
