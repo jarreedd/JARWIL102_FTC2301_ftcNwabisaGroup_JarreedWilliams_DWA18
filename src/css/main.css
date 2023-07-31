@@ -272,11 +272,26 @@
       background-color: #2a8539; }
       .season-dialog .back-to-season:hover ion-icon {
         color: #fafafa; }
+  .season-dialog .seasons {
+    display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+    gap: 8px;
+    padding: 10px 0; }
+    .season-dialog .seasons .prev-season, .season-dialog .seasons .next-season {
+      background-color: #2a623d;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      border-radius: 5px; }
+      .season-dialog .seasons .prev-season ion-icon, .season-dialog .seasons .next-season ion-icon {
+        font-size: 40px;
+        color: #cccccc; }
   .season-dialog .season-selected {
     font-size: 16px;
     width: 100%;
-    margin: 10px 0;
-    padding: 0 0 0 10px;
+    height: 65px;
+    margin: 0;
+    padding: 0;
     border: none;
     border-radius: 5px;
     display: flex;
@@ -296,6 +311,30 @@
         justify-self: flex-start; }
       .season-dialog .season-selected .season-info p {
         font-size: 12px; }
+  .season-dialog .episode {
+    background-color: #cccccc;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    align-items: center;
+    height: 50px;
+    padding: 5px;
+    margin-bottom: 10px; }
+    .season-dialog .episode-title {
+      display: flex; }
+      .season-dialog .episode-title small {
+        margin: 0 10px; }
+      .season-dialog .episode-title h5 {
+        margin: 0;
+        padding: 0; }
+    .season-dialog .episode ion-icon {
+      font-size: 26px; }
+  .season-dialog .episodes {
+    height: 60vh;
+    overflow-y: scroll; }
+    .season-dialog .episodes::-webkit-scrollbar {
+      visibility: hidden;
+      width: 0; }
 
 * {
   box-sizing: border-box;

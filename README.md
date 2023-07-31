@@ -30,7 +30,7 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 - User can listen to any episode in a season of a show
 
-- User can see a view where only episodes for a specifically selected season are shown
+✅ User can see a view where only episodes for a specifically selected season are shown
 
 - User can toggle between different seasons for the same show
 
@@ -48,7 +48,7 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 ✅ User sees the amount of episodes in a season as a number
 
-- User can go back to a show view from a season-specific view
+✅ User can go back to a show view from a season-specific view
 
 - User can mark specific episodes as favourites to find them again
 
