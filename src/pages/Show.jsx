@@ -1,16 +1,55 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+const SHOW_API = "https://podcast-api.netlify.app/id/";
 
 const Show = () => {
     const location = useLocation();
-    const data = location.state;
+    const ID = location.state.id;
+
+    const [state, setState] = React.useState({
+        isloading: false,
+        preview: location.state,
+        show: null,
+    });
+
+    React.useEffect(() => {
+        fetch(`${SHOW_API}${ID}`)
+            .then((res) => res.json())
+            .then((data) => {
+                setState((prev) => {
+                    return {
+                        ...prev,
+                        show: data,
+                    };
+                });
+                console.log(data);
+            });
+    }, []);
 
     return (
         <main className="show-main">
-            <div className="show-info">
-                <img src={data.image} className="preview--image" />
-                <h2 className="preview--title">{data.title}</h2>
-            </div>
+            {state.show && (
+                <>
+                    <div className="show-info">
+                        <img src={state.show.image} className="image" />
+                        <h2 className="title">{state.show.title}</h2>
+                        <p className="description">{state.show.description}</p>
+                    </div>
+                    <h3>Seasons: </h3>
+                    <div className="select-season">
+                        {state.show.seasons.map((season) => {
+                            return (
+                                <button className="season-btn">
+                                    <img className="image" src={season.image} />
+                                    <h5 className="season-title">
+                                        {season.title}
+                                    </h5>
+                                </button>
+                            );
+                        })}
+                    </div>
+                </>
+            )}
         </main>
     );
 };

@@ -209,8 +209,35 @@
 .show-main {
   padding: 20px; }
 
-.show-info img {
-  height: 100px; }
+.show-info .image {
+  height: 140px;
+  border-radius: 10px; }
+
+.show-info .title {
+  font-size: 1.5rem;
+  margin: 10px 0; }
+
+.show-info .description {
+  font-size: 12px; }
+
+.select-season {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 90vw; }
+  .select-season .season-btn {
+    font-size: 16px;
+    width: 80px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 5px; }
+    .select-season .season-btn .season-title {
+      margin: 0 0 5px 0;
+      padding: 0; }
+    .select-season .season-btn .image {
+      height: 80px;
+      border-radius: 5px; }
 
 * {
   box-sizing: border-box;

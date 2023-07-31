@@ -20,7 +20,7 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 ✅ All show data loaded via a fetch call from the https://podcast-api.netlify.app/shows
 
-- When viewing a specific show, data is loaded via fetch from individual show endpoint
+✅ When viewing a specific show, data is loaded via fetch from individual show endpoint
 
 - There is a loading state while initial data is being loaded
 
@@ -34,15 +34,15 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 - User can toggle between different seasons for the same show
 
-- User can see the name of all available shows on the platform
+✅ User can see the name of all available shows on the platform
 
-- User sees preview image of shows when browsing
+✅ User sees preview image of shows when browsing
 
-- User sees the amount of seasons per show as a number when browsing
+✅ User sees the amount of seasons per show as a number when browsing
 
-- User sees a human-readable date as to when a show was last updated
+✅ User sees a human-readable date as to when a show was last updated
 
-- User sees what genres (as genre titles) a show is associated with when browsing
+✅ User sees what genres (as genre titles) a show is associated with when browsing
 
 - User sees a preview image of seasons for a specific show
 
