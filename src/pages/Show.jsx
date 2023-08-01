@@ -12,7 +12,6 @@ const Show = () => {
         isLoading: true,
         preview: location.state,
         show: null,
-        seasonView: false,
         season: "",
     });
 
@@ -30,6 +29,24 @@ const Show = () => {
             return {
                 ...prev,
                 season: false,
+            };
+        });
+    }
+
+    function previousSeason() {
+        setState((prev) => {
+            return {
+                ...prev,
+                season: state.show.seasons[state.season.season - 2],
+            };
+        });
+    }
+
+    function nextSeason() {
+        setState((prev) => {
+            return {
+                ...prev,
+                season: state.show.seasons[state.season.season],
             };
         });
     }
@@ -53,7 +70,13 @@ const Show = () => {
             {state.isLoading && <div>Loading...</div>}
             {state.show && (
                 <>
-                    <Season state={{ ...state }} closeHandler={closeHandler} />
+                    <Season
+                        state={{ ...state }}
+                        closeHandler={closeHandler}
+                        nextSeasonHandler={nextSeason}
+                        previousSeasonHandler={previousSeason}
+                    />
+
                     <div className="show-info">
                         <img src={state.show.image} className="image" />
                         <h2 className="title">{state.show.title}</h2>

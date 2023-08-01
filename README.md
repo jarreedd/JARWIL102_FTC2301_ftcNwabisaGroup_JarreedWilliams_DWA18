@@ -32,7 +32,7 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 ✅ User can see a view where only episodes for a specifically selected season are shown
 
-- User can toggle between different seasons for the same show
+✅ User can toggle between different seasons for the same show
 
 ✅ User can see the name of all available shows on the platform
 

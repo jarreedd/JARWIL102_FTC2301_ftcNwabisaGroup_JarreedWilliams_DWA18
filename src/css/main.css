@@ -273,13 +273,13 @@
       .season-dialog .back-to-season:hover ion-icon {
         color: #fafafa; }
   .season-dialog .seasons {
-    display: grid;
-    grid-template-columns: 1fr 12fr 1fr;
+    display: flex;
     gap: 8px;
     padding: 10px 0; }
     .season-dialog .seasons .prev-season, .season-dialog .seasons .next-season {
       background-color: #2a623d;
       height: 65px;
+      width: 40px;
       display: flex;
       align-items: center;
       border-radius: 5px; }

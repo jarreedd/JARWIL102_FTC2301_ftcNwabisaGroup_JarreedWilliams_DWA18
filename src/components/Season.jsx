@@ -2,8 +2,14 @@ import React from "react";
 import EpisodeDisplay from "./EpisodeDisplay.jsx";
 
 const Season = (props) => {
-    const { state, closeHandler } = props;
+    const { state, closeHandler, nextSeasonHandler, previousSeasonHandler } =
+        props;
     const { season } = state;
+    const numSeasons = state.show.seasons.length;
+
+    const showPrevBtn = season.season <= 1 ? false : true;
+    const showNextBtn = season.season === numSeasons ? false : true;
+
     return (
         <div>
             <dialog
@@ -15,9 +21,14 @@ const Season = (props) => {
                 </button>
 
                 <div className="seasons">
-                    <div className="prev-season">
-                        <ion-icon name="chevron-back-outline"></ion-icon>
-                    </div>
+                    {showPrevBtn && (
+                        <div
+                            className="prev-season"
+                            onClick={previousSeasonHandler}
+                        >
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </div>
+                    )}
                     <button className="season-selected">
                         <h4>{season.season}</h4>
                         <img className="image" src={season.image} />
@@ -25,9 +36,14 @@ const Season = (props) => {
                             <h5 className="season-title">{season.title}</h5>
                         </div>
                     </button>
-                    <div className="next-season">
-                        <ion-icon name="chevron-forward-outline"></ion-icon>
-                    </div>
+                    {showNextBtn && (
+                        <div
+                            className="next-season"
+                            onClick={nextSeasonHandler}
+                        >
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </div>
+                    )}
                 </div>
 
                 <EpisodeDisplay episodes={season.episodes} />
