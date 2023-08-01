@@ -331,10 +331,22 @@
       font-size: 26px; }
   .season-dialog .episodes {
     height: 60vh;
+    padding-bottom: 85px;
     overflow-y: scroll; }
     .season-dialog .episodes::-webkit-scrollbar {
       visibility: hidden;
       width: 0; }
+
+.media-player {
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  margin: 10px 20px;
+  padding-bottom: 0;
+  padding-top: 0;
+  display: flex;
+  border: none;
+  background: none; }
 
 * {
   box-sizing: border-box;

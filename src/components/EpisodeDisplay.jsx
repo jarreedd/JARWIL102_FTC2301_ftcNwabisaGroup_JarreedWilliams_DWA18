@@ -1,7 +1,7 @@
 import React from "react";
 
 const EpisodeDisplay = (props) => {
-    const { episodes } = props;
+    const { episodes, playEpHandler } = props;
 
     return (
         <div className="select-episode">
@@ -10,7 +10,11 @@ const EpisodeDisplay = (props) => {
                 <div className="episodes">
                     {episodes.map((episode) => {
                         return (
-                            <div className="episode">
+                            <div
+                                className="episode"
+                                key={episode.title}
+                                onClick={() => playEpHandler(episode)}
+                            >
                                 <div className="episode-title">
                                     <small>{episode.episode}.</small>
                                     <h5>{episode.title}</h5>

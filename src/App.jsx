@@ -10,13 +10,31 @@ import Favorites from "./pages/Favorites.jsx";
 import NoPage from "./pages/NoPage.jsx";
 
 function App() {
+    const [state, setState] = React.useState({
+        isPlaying: false,
+        episode: {},
+    });
+
+    function playEp(episode) {
+        setState((prev) => {
+            return {
+                ...prev,
+                episode: episode,
+                isPlaying: true,
+            };
+        });
+    }
+
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout />}>
+                <Route path="/" element={<Layout state={state} />}>
                     <Route index element={<Home />} />
                     <Route path="*" element={<NoPage />} />
-                    <Route path="show" element={<Show />} />
+                    <Route
+                        path="show"
+                        element={<Show playEpHandler={playEp} />}
+                    />
                     <Route path="login" element={<Login />} />
                     <Route path="favorites" element={<Favorites />} />
                     <Route path="downloads" element={<Downloads />} />

@@ -2,8 +2,13 @@ import React from "react";
 import EpisodeDisplay from "./EpisodeDisplay.jsx";
 
 const Season = (props) => {
-    const { state, closeHandler, nextSeasonHandler, previousSeasonHandler } =
-        props;
+    const {
+        state,
+        closeHandler,
+        nextSeasonHandler,
+        previousSeasonHandler,
+        playEpHandler,
+    } = props;
     const { season } = state;
     const numSeasons = state.show.seasons.length;
 
@@ -46,7 +51,10 @@ const Season = (props) => {
                     )}
                 </div>
 
-                <EpisodeDisplay episodes={season.episodes} />
+                <EpisodeDisplay
+                    episodes={season.episodes}
+                    playEpHandler={playEpHandler}
+                />
             </dialog>
         </div>
     );

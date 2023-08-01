@@ -4,7 +4,8 @@ import Season from "../components/Season.jsx";
 import SeasonDisplay from "../components/SeasonDisplay.jsx";
 const SHOW_API = "https://podcast-api.netlify.app/id/";
 
-const Show = () => {
+const Show = (props) => {
+    const { playEpHandler } = props;
     const location = useLocation();
     const ID = location.state.id;
 
@@ -15,7 +16,7 @@ const Show = () => {
         season: "",
     });
 
-    function openHandler(param) {
+    function openSeason(param) {
         setState((prev) => {
             return {
                 ...prev,
@@ -24,7 +25,7 @@ const Show = () => {
         });
     }
 
-    function closeHandler() {
+    function closeSeason() {
         setState((prev) => {
             return {
                 ...prev,
@@ -72,9 +73,10 @@ const Show = () => {
                 <>
                     <Season
                         state={{ ...state }}
-                        closeHandler={closeHandler}
+                        closeHandler={closeSeason}
                         nextSeasonHandler={nextSeason}
                         previousSeasonHandler={previousSeason}
+                        playEpHandler={playEpHandler}
                     />
 
                     <div className="show-info">
@@ -85,7 +87,7 @@ const Show = () => {
 
                     <SeasonDisplay
                         state={{ ...state }}
-                        openHandler={openHandler}
+                        openHandler={openSeason}
                     />
                 </>
             )}
