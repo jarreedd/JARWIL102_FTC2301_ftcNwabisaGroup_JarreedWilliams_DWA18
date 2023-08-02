@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import Menu from "../components/Menu.jsx";
-import MediaPlayer from "../components/MediaPlayer.jsx";
+import AudioPlayer from "../components/AudioPlayer.jsx";
 
 const Layout = (props) => {
     const { state } = props;
@@ -10,7 +10,7 @@ const Layout = (props) => {
         <>
             <Header />
             <Menu />
-            {state.isPlaying && <MediaPlayer state={state} />}
+            {state.isPlaying && <AudioPlayer state={state} />}
             <Outlet />
         </>
     );
