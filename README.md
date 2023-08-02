@@ -60,19 +60,19 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 - User is able to remove episodes from their favourites
 
-- User can arrange the list of shows by title from A-Z
+✅ User can arrange the list of shows by title from A-Z
 
-- User can arrange the list of shows by title from Z-A
+✅ User can arrange the list of shows by title from Z-A
 
-- User can arrange the list of shows by date updated in ascending order
+✅ User can arrange the list of shows by date updated in ascending order
 
-- User can arrange the list of shows by date updated in descending order
+✅ User can arrange the list of shows by date updated in descending order
 
 - User can filter shows by title through a text input
 
 - User can find shows based on fuzzy matching of strings (you can use something like https://fusejs.io/)
 
-- Automatically filter shows by genre if the genre label is clicked on
+✅ Automatically filter shows by genre if the genre label is clicked on
 
 - User sees the date and time that an episode was added to their favourites list
 

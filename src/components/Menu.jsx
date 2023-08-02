@@ -48,12 +48,6 @@ const Menu = () => {
                             <h4>Favirotes</h4>
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/downloads" className="nav-item">
-                            <ion-icon name="download-outline"></ion-icon>
-                            <h4>Downloads</h4>
-                        </Link>
-                    </li>
                 </ul>
             </nav>
             <div className={showMore ? "overlay show" : "overlay"}></div>

@@ -30,13 +30,13 @@ const PreviewDisplay = ({ title, size }) => {
             resortedShows = state.shows.toSorted((a, b) => {
                 const aUpdated = new Date(a.updated);
                 const bUpdated = new Date(b.updated);
-                return aUpdated.getTime() - bUpdated.getTime();
+                return bUpdated.getTime() - aUpdated.getTime();
             });
         } else if (sort === "least-recent") {
             resortedShows = state.shows.toSorted((a, b) => {
                 const aUpdated = new Date(a.updated);
                 const bUpdated = new Date(b.updated);
-                return bUpdated.getTime() - aUpdated.getTime();
+                return aUpdated.getTime() - bUpdated.getTime();
             });
         }
 
