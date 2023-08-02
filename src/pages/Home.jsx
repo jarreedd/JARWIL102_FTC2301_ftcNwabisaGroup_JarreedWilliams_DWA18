@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../components/Banner.jsx";
 import PreviewDisplay from "../components/PreviewDisplay.jsx";
+import supabase from "../config/supabaseClient.js";
 
 function Home() {
     return (

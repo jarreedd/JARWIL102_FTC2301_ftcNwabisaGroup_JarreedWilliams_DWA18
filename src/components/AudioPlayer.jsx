@@ -70,10 +70,7 @@ const AudioPlayer = (props) => {
                             {audState.isPlaying ? (
                                 <ion-icon name="pause-outline"></ion-icon>
                             ) : (
-                                <ion-icon
-                                    name="play-outline"
-                                    className="play"
-                                ></ion-icon>
+                                <ion-icon name="play-outline"></ion-icon>
                             )}
                         </button>
                         {/* <button>

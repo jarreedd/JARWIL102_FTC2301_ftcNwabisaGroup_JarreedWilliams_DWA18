@@ -19,7 +19,7 @@ const Preview = ({ data }) => {
     const genre = data.genres.map((item) => GENRES[item]);
 
     return (
-        <Link to="show" state={data}>
+        <Link to={`show/${data.id}`} state={data}>
             <div className="preview">
                 <img src={data.image} className="preview--image" />
                 <p className="preview--title">{data.title}</p>
