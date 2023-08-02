@@ -1,22 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import getdate from "../utilities/getdate.js";
-const GENRES = {
-    1: "Personal Growth ",
-    2: "True Crime and Investigative Journalism  ",
-    3: "History  ",
-    4: "Comedy  ",
-    5: "Entertainment  ",
-    6: "Business  ",
-    7: "Fiction  ",
-    8: "News  ",
-    9: "Kids and Family  ",
-};
+import getdate from "../utilities/get.date.js";
+import { GENRES } from "../utilities/genres.js";
 
 const Preview = ({ data }) => {
     const date = new Date(data.updated);
     const updatedDate = getdate(date);
-    const genre = data.genres.map((item) => GENRES[item]);
+    const genre = data.genres.map((item) => GENRES[item - 1]);
 
     return (
         <Link to={`show/${data.id}`} state={data}>

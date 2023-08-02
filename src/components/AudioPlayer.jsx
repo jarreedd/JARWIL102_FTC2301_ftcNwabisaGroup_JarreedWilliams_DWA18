@@ -31,7 +31,8 @@ const AudioPlayer = (props) => {
     React.useEffect(() => {
         setAudState(state);
         if (audioPlayer.current && audioPlayer.current.duration) {
-            setDuration(audioPlayer.current.duration);
+            const seconds = Math.floor(audioPlayer.current.duration);
+            setDuration(seconds);
         }
     }, [
         state,

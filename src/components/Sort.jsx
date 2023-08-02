@@ -1,8 +1,10 @@
 import React from "react";
+import { GENRES } from "../utilities/genres";
 
-const Sort = ({ title }) => {
+const Sort = ({ title, sortHandler, filterHandler }) => {
     const [sort, setSort] = React.useState("all");
     const [filterOpen, setFilterOpen] = React.useState(false);
+    const [filter, setFilter] = React.useState("");
 
     function formHandler(event) {
         event.preventDefault();
@@ -10,81 +12,75 @@ const Sort = ({ title }) => {
 
     function activeSort(event) {
         setSort(event.target.name);
+        sortHandler(event.target.name);
     }
+
+    function activeFilter(event) {
+        filterHandler(event.target.name);
+        setFilter(event.target.name);
+    }
+
+    const sortBtnClassName = (btnName) =>
+        sort === btnName ? "sort-btn active" : "sort-btn";
 
     return (
         <div className="browse--filters">
             <form className="filter--form" onSubmit={formHandler}>
                 <h3>{title}</h3>
+
                 <div className="sort-btn-container">
-                    {/* <div className="left-arrow">
-                        <ion-icon name="chevron-back-outline"></ion-icon>
-                    </div> */}
                     <div className="sort-list" onClick={activeSort}>
-                        <button
-                            className={
-                                sort === "all" ? "sort-btn active" : "sort-btn"
-                            }
-                            name="all"
-                        >
+                        <button className={sortBtnClassName("all")} name="all">
                             All
                         </button>
-                        <button
-                            className={
-                                sort === "a-z" ? "sort-btn active" : "sort-btn"
-                            }
-                            name="a-z"
-                        >
+                        <button className={sortBtnClassName("a-z")} name="a-z">
                             A-Z
                         </button>
-                        <button
-                            className={
-                                sort === "z-a" ? "sort-btn active" : "sort-btn"
-                            }
-                            name="z-a"
-                        >
+                        <button className={sortBtnClassName("z-a")} name="z-a">
                             Z-A
                         </button>
                         <button
-                            className={
-                                sort === "most-recent"
-                                    ? "sort-btn active"
-                                    : "sort-btn"
-                            }
+                            className={sortBtnClassName("most-recent")}
                             name="most-recent"
                         >
                             Most Recent
                         </button>
                         <button
-                            className={
-                                sort === "least-recent"
-                                    ? "sort-btn active"
-                                    : "sort-btn"
-                            }
+                            className={sortBtnClassName("least-recent")}
                             name="least-recent"
                         >
                             Least Recent
                         </button>
                     </div>
-                    {/* <div className="right-arrow active">
-                        <ion-icon name="chevron-forward-outline"></ion-icon>
-                    </div> */}
                 </div>
+
                 <button
-                    type="button"
                     className="filters--btn"
+                    type="button"
                     onClick={() => setFilterOpen((prev) => !prev)}
                 >
                     filters
                 </button>
+
                 <dialog className="filter--dialog" open={filterOpen}>
-                    <button
-                        type="button"
+                    <ion-icon
+                        name="close-outline"
                         onClick={() => setFilterOpen((prev) => !prev)}
-                    >
-                        Close
-                    </button>
+                    ></ion-icon>
+
+                    <div className="filter-btns" onClick={activeFilter}>
+                        {GENRES.map((item, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setFilterOpen((prev) => !prev)}
+                                name={index + 1}
+                            >
+                                {item}
+                            </button>
+                        ))}
+                    </div>
                 </dialog>
+
                 <div className={filterOpen ? "overlay show" : "overlay"}></div>
             </form>
         </div>
