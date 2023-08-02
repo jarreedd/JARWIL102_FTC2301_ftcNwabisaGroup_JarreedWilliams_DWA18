@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout.jsx";
 import Home from "./pages/Home.jsx";
-// import Landing from "";
 import Login from "./pages/Login.jsx";
 import Show from "./pages/Show.jsx";
 import Favorites from "./pages/Favorites.jsx";
