@@ -435,6 +435,32 @@ span {
   position: sticky;
   top: 0; }
 
+.search-bar {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 1px;
+  background-color: #fafafa; }
+  .search-bar .title-search-input {
+    width: 375px;
+    height: 28px;
+    margin-left: 40px;
+    padding: 0 10px;
+    border-radius: 15px 0 0 15px;
+    border: 2px solid #cccccc;
+    border-right: none; }
+  .search-bar button {
+    height: 28px;
+    width: 40px;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    background-color: #cccccc; }
+    .search-bar button ion-icon {
+      font-size: 24px; }
+
 ion-icon {
   font-size: 26px;
   color: #2a623d; }

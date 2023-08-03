@@ -50,6 +50,39 @@ span {
     top: 0;
 }
 
+.search-bar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 1px;
+    background-color: $background;
+
+    .title-search-input {
+        width: 375px;
+        height: 28px;
+        margin-left: 40px;
+        padding: 0 10px;
+        border-radius: 15px 0 0 15px;
+        border: 2px solid $secondary;
+        border-right: none;
+    }
+
+    button {
+        height: 28px;
+        width: 40px;
+        border-radius: 0 15px 15px 0;
+        border: none;
+        background-color: $secondary;
+
+        ion-icon {
+            font-size: 24px;
+        }
+    } 
+}
+
 ion-icon {
     font-size: 26px;
     color: $primary;

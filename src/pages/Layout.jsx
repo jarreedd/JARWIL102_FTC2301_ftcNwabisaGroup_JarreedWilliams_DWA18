@@ -6,9 +6,20 @@ import AudioPlayer from "../components/AudioPlayer.jsx";
 
 const Layout = (props) => {
     const { state } = props;
+    const [searchBar, setSearchBar] = React.useState({
+        isOpen: true,
+    });
+
+    function toggleSearchBar() {
+        setSearchBar((prev) => {
+            return { ...prev, isOpen: !prev.isOpen };
+        });
+    }
+
     return (
         <>
-            <Header />
+            <Header openSearchHandler={toggleSearchBar} searchBar={searchBar} />
+
             <Menu />
             {state.isPlaying && <AudioPlayer state={state} />}
             <Outlet />
