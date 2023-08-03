@@ -59,6 +59,8 @@ span {
     padding: 20px;
     margin-top: 1px;
     background-color: $background;
+    position: sticky;
+    top: 0;
 
     .title-search-input {
         width: 375px;

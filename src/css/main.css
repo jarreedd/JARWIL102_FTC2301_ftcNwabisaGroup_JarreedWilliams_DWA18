@@ -441,7 +441,9 @@ span {
   justify-content: center;
   padding: 20px;
   margin-top: 1px;
-  background-color: #fafafa; }
+  background-color: #fafafa;
+  position: sticky;
+  top: 0; }
   .search-bar .title-search-input {
     width: 375px;
     height: 28px;
