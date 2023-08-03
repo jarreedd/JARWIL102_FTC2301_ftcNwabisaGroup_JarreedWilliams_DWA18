@@ -86,7 +86,7 @@ const PreviewDisplay = ({ title, size }) => {
                 filterHandler={filterShows}
             />
         ) : (
-            <h3>{title}</h3>
+            <h3 className="small--preview-display-title">{title}</h3>
         );
     const type = size ? `${size}--preview` : "preview";
 

@@ -122,6 +122,35 @@
           font-size: 12px;
           font-weight: 600; }
 
+.small--preview-display {
+  background-color: #fafafa;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  margin-left: 20px; }
+  .small--preview-display::-webkit-scrollbar {
+    width: 0px; }
+  .small--preview-display-title {
+    margin: 10px 20px; }
+  .small--preview-display .preview {
+    min-width: 120px;
+    height: 170px;
+    background: #cccccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px; }
+    .small--preview-display .preview .preview--image {
+      height: 100px;
+      border-radius: 10px; }
+    .small--preview-display .preview .preview--title {
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      font-weight: 700; }
+    .small--preview-display .preview .preview--details {
+      display: none; }
+
 .banner {
   width: 100%;
   height: max-content;

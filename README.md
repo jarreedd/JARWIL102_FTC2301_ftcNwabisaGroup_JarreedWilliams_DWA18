@@ -100,7 +100,7 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 - User can "reset" all their progress, effectively removing their listening history
 
-- User is presented with a sliding carousel of possible shows they might be interested in on the landing page
+✅ User is presented with a sliding carousel of possible shows they might be interested in on the landing page
 
 - User can log in via https://app.supabase.com authentication
 
