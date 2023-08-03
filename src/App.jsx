@@ -11,6 +11,7 @@ function App() {
         isPlaying: false,
         episode: {},
     });
+
     function playEp(episode) {
         setState((prev) => {
             return {

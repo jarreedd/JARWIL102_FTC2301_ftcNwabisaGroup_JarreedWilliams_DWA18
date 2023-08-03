@@ -7,7 +7,7 @@ import AudioPlayer from "../components/AudioPlayer.jsx";
 const Layout = (props) => {
     const { state } = props;
     const [searchBar, setSearchBar] = React.useState({
-        isOpen: true,
+        isOpen: false,
     });
 
     function toggleSearchBar() {
