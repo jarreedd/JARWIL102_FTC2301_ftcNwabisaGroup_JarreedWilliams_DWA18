@@ -28,7 +28,7 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 ✅ User can view the details of a show broken down into seasons, sorted by number
 
-- User can listen to any episode in a season of a show
+✅ User can listen to any episode in a season of a show
 
 ✅ User can see a view where only episodes for a specifically selected season are shown
 
@@ -84,9 +84,9 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 - User can arrange favourites by date updated in descending order
 
-- Audio player shows current progress and episode length as timestamps
+✅ Audio player shows current progress and episode length as timestamps
 
-- Audio player is always visible, so the user can listen to episodes while they browse
+✅ Audio player is always visible, so the user can listen to episodes while they browse
 
 - User is prompted to confirm they want to close the page when audio is playing
 
