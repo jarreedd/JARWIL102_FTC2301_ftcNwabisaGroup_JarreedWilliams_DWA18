@@ -22,49 +22,6 @@
             padding: 0 2px;
             position: relative;
 
-            // ion-icon {
-            //     height: 16px;
-            //     width: 16px;
-            //     cursor: pointer;
-            //     position: relative;
-            //     padding: 3px;
-
-            //     &:hover {
-            //         background-color: $accent;
-            //         color: $background;
-            //         border-radius: 50%;
-            //     }
-            // }
-
-            // .left-arrow {
-            //     position: absolute;
-            //     height: 100%;
-            //     width: 60px;
-            //     top: 0;
-            //     display: none;
-            //     align-items: center;
-            //     background: linear-gradient(to right, $background 50%, transparent);
-                
-            //     &.active {
-            //         display: flex;
-            //     }
-            // }
-            // .right-arrow {
-            //     position: absolute;
-            //     height: 24px;
-            //     width: 60px;
-            //     right: 0px;
-            //     top: 0;
-            //     background: linear-gradient(to left, $background 50%, transparent);
-            //     display: none;
-            //     align-items: center;
-            //     justify-content: flex-end;
-
-            //     &.active {
-            //         display: flex;
-            //     }
-            // }
-
             .sort-list {
                 display: flex;
                 align-items: center;
@@ -98,14 +55,42 @@
                 }
             }
         }
+
+        .filters--btn, .filter-btns button {
+
+            height: 25px;
+            padding: 0px 5px;
+            color: $background;
+            background-color: $primary;
+            border: none;
+            border-radius: 5px;
+            user-select: none;
+            white-space: nowrap;
+        }
     
         .filter--dialog {
-            width: 80vw;
-            height: 200px;
+            position: fixed;
+            top: 100px;
+            width: min-content;
+            height: max-content;
             border-radius: 10px;
             border: none;
             background-color: $background;
             z-index: 3;
+
+            h3 {
+                margin: 10px 0;
+            }
+
+            .filter-btns {
+                display: flex;
+                flex-direction: column;
+
+                button {
+                    margin: 8px 0;
+                    padding: 5px;
+                }
+            }
         }
     }
 }

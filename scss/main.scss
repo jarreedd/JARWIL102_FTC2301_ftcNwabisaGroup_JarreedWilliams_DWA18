@@ -81,3 +81,25 @@ a {
         color: $text;
     }
 }
+
+
+// mediaMd 
+@media only screen and (min-width: 500px) {
+    .preview-display {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .menu-nav {
+        width: 50vw;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .preview-display {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    // .menu, .menu-btn, .overlay { display: none; }
+}
+
+    

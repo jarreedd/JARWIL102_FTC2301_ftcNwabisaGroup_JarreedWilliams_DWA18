@@ -9,10 +9,10 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 
 ### User Stories
+ 
+✅ Project is deployed to a custom Netlify URL
 
-✅Project is deployed to a custom Netlify URL
-
-- All views in the app display correctly on the smallest mobile device available, “iPhone SE”. This can be emulated in Chrome Dev tools.
+✅ All views in the app display correctly on the smallest mobile device available, “iPhone SE”. This can be emulated in Chrome Dev tools.
 
 ✅ All favicon information has been created an added correctly via https://realfavicongenerator.net/ (you are welcome to use any free PNG image you find on https://www.flaticon.com/)
 
