@@ -128,13 +128,11 @@
   gap: 16px;
   overflow-x: auto;
   margin-left: 20px; }
-  .small--preview-display::-webkit-scrollbar {
-    width: 0px; }
   .small--preview-display-title {
     margin: 10px 20px; }
   .small--preview-display .preview {
     min-width: 120px;
-    height: 170px;
+    height: 175px;
     background: #cccccc;
     border-radius: 10px;
     display: flex;

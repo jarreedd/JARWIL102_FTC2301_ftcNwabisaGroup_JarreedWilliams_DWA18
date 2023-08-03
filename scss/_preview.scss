@@ -59,16 +59,13 @@
 
     margin-left: 20px;
 
-    &::-webkit-scrollbar {
-        width: 0px;
-    }
     &-title{
         margin: 10px 20px;
     }
 
     .preview {
         min-width: 120px;
-        height: 170px;
+        height: 175px;
         background: $secondary;
         border-radius: 10px;
         display: flex;
